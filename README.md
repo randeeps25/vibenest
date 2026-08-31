@@ -13,15 +13,6 @@ Instead of using a paid AI service, VibeNest uses simple Python keyword scoring 
 
 It then recommends five songs from a small built-in catalog, optionally giving priority to the user's preferred genre. Each result includes Spotify and YouTube search links.
 
-## Why this is a good student project
-
-- Uses Python in a real website
-- Easy enough to explain in an interview
-- No paid API or API key required
-- Includes text processing, recommendation logic, Flask, HTML and CSS
-- Easy to extend later with a real ML emotion classifier or Spotify API
-- Can be hosted publicly on Render
-
 ## Project structure
 
 ```text
@@ -116,27 +107,6 @@ stressed → stressed, finals
 hopeful  → hopeful
 ```
 
-The mood with the highest score wins. If there is no match, VibeNest chooses a calm mix.
-
-This is intentionally simple. It is a **rule-based text classifier**, not a trained AI model.
-
-## Easy upgrades for later
-
-Once the basic version works, you can add:
-
-1. A Hugging Face sentiment/emotion model
-2. Spotify API integration
-3. User accounts and saved mixes
-4. A "day/night" preference
-5. More songs and genres
-6. A mood history chart
-7. An image-based mood feature
-
-## Resume / LinkedIn description
-
-**VibeNest — Mood-Based Music Recommender**
-
-Built a Flask web app that analyzes user-written mood descriptions with a lightweight rule-based text classifier and generates personalized five-song recommendations across six mood categories. Added genre-aware recommendation logic, responsive UI, and direct Spotify/YouTube discovery links, with deployment designed for Render's free web hosting.
 
 ## Important
 
