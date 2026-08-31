@@ -1,113 +1,45 @@
-# VibeNest 🎧
+# 🎧 VibeNest
 
-**VibeNest** is a beginner-friendly Flask web app that turns a short mood description into a personalized mini music mix.
+**VibeNest** is a mood-based music recommendation website built with Python and Flask.
 
-Instead of using a paid AI service, VibeNest uses simple Python keyword scoring to classify text into one of six moods:
+Describe how you're feeling, choose your preferred music style, and VibeNest will detect your mood and create a personalized 5-song mix.
 
-- Happy
-- Calm
-- Sad
-- Stressed
-- Motivated
-- Hopeful
+## 🚀 Live Demo
 
-It then recommends five songs from a small built-in catalog, optionally giving priority to the user's preferred genre. Each result includes Spotify and YouTube search links.
+### [Try VibeNest →](https://vibenest-v9yk.onrender.com/)
 
-## Project structure
+## Features
 
-```text
-VibeNest/
-├── app.py
-├── requirements.txt
-├── render.yaml
-├── README.md
-├── static/
-│   └── style.css
-└── templates/
-    └── index.html
-```
+* Detects 6 different moods from text
+* Generates personalized song recommendations
+* Supports different music preferences
+* Direct Spotify and YouTube links
+* Works on desktop and mobile
+* Free to use — no account required
 
-## Run it on your computer
+## How It Works
 
-### 1. Open a terminal in the project folder
+VibeNest uses a simple Python keyword-scoring system to classify text into one of six moods:
 
-```bash
-cd VibeNest
-```
+**Happy · Calm · Sad · Stressed · Motivated · Hopeful**
 
-### 2. Create a virtual environment
+It then combines the detected mood with the user's music preference to recommend five songs.
 
-Windows:
+## Built With
 
-```bash
-python -m venv venv
-venv\Scripts\activate
-```
+**Python · Flask · HTML · CSS · GitHub · Render**
 
-macOS/Linux:
+## Run Locally
 
-```bash
-python3 -m venv venv
-source venv/bin/activate
-```
-
-### 3. Install the packages
-
-```bash
+```bash id="87j89y"
+git clone https://github.com/randeeps25/vibenest.git
+cd vibenest
 pip install -r requirements.txt
+python3 app.py
 ```
 
-### 4. Start the website
+Then open `http://127.0.0.1:5000` in your browser.
 
-```bash
-python app.py
-```
+---
 
-Then open:
-
-```text
-http://127.0.0.1:5000
-```
-
-## Deploy on Render
-
-1. Create a GitHub repository, for example `vibenest`.
-2. Upload all files from this folder to the repository.
-3. Sign in to Render.
-4. Choose **New → Web Service**.
-5. Connect your GitHub repository.
-6. Choose the **Free** instance type.
-7. Use:
-
-```text
-Build Command: pip install -r requirements.txt
-Start Command: gunicorn app:app
-```
-
-8. Deploy.
-
-Render will provide a public `onrender.com` URL.
-
-> Note: Render's free web services can go to sleep after a period of inactivity, so the first visit after inactivity may take longer to load.
-
-## How the mood detection works
-
-The function `detect_mood()` converts the user's text to lowercase and checks it against lists of mood-related keywords.
-
-Example:
-
-```text
-"I am stressed about finals but hopeful for summer"
-```
-
-Possible keyword matches:
-
-```text
-stressed → stressed, finals
-hopeful  → hopeful
-```
-
-
-## Important
-
-VibeNest does not claim to diagnose mental health or accurately infer a person's emotional state. It is an entertainment/music recommendation project.
+Built as a personal project to explore Python web development, text classification, and recommendation systems.
